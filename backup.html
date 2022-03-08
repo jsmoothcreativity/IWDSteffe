@@ -1,0 +1,37 @@
+<html>
+	<head>
+
+	<head>
+	
+	<body>
+	
+	<div class="login">
+		<h1>Women's day Message</h1>
+
+		<form method="post">
+			Enter username : <input id='username' type='text' required>
+			Enter password : <input id='password' type='password' required>
+			<p id="error"></p>
+			<p id="sucess"></p>
+			<button id="submit" type="button">Login</button>
+		</form>
+
+	
+	<script>
+		document.querySelector('#submit').addEventListener('click', validateForm);
+
+		function validateForm(){
+		  var username = document.querySelector('#username').value;
+		  var password = document.querySelector('#password').value;
+		  if (username === 'username' && password === 'password') {
+			document.querySelector('#sucess').textContent = 'sucessful login';
+			// redirect or submit 
+			window.location.assign("message.html")
+		  }
+		  else {
+			document.querySelector('#error').textContent = 'invalid credentials';    
+		  }
+		}
+	</script>
+	</body>
+</html>
